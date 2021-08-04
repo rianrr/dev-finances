@@ -42,6 +42,10 @@ const transactions = [
 
 const Transaction = {
   all: transactions,
+  add(transaction) {
+    Transaction.all.push(transaction);
+    console.log(Transaction.all);
+  },
 
   incomes() {
     let income = 0;
@@ -125,6 +129,13 @@ const DOM = {
     );
   },
 };
+
+Transaction.add({
+  id: 39,
+  description: "alo",
+  amount: 400,
+  date: 04 / 08 / 2021,
+});
 
 transactions.forEach((transaction) => {
   DOM.addTransaction(transaction);
