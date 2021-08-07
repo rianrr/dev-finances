@@ -73,9 +73,9 @@ const Transaction = {
 
 const Utils = {
   formatAmount(value) {
-    value = Number(value.replace(/\,?\.?/g, "")) * 100;
+    value = value;
 
-    return value;
+    return Math.round(value);
   },
 
   formatDate(date) {
